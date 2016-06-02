@@ -97,7 +97,7 @@ main {
 			-webkit-box-sizing: border-box;
 			   -moz-box-sizing: border-box;
 			        box-sizing: border-box;
-			padding: 15px 20px;
+			padding: 15px 10px;
 			background-color: #cb2314;
 			text-align: center;
 			p {
@@ -133,7 +133,10 @@ main {
 			outline: none;
 			border: none;
 			margin-top: 0;
+			margin-bottom: 10px;
 			cursor: pointer;
+			padding: 0;
+			font-size: 14px;
 		}
 	}
 	&__bot {
@@ -303,3 +306,41 @@ main {
 	}
 }
 
+.advantages {
+	float: left;
+	width: 100%;
+	margin: 25px 0;
+	h2{
+		float: left;
+		width: 100%;
+		margin: 55px 0;
+	    text:#fff 700 uppercase center 30px; 
+	    span {
+	    	background-image: url('../img/Layer-20.png');
+	    	background-repeat: no-repeat;
+	    	-webkit-background-size: contain;
+	    	     -o-background-size: contain;
+	    	        background-size: contain;
+    	    padding: 70px 40px 55px;
+	    }
+	}
+	&__text {
+		float: left;
+		width: 45%;
+		&_item {
+			margin: 15px 0;
+			h4 {
+				text: #cb2314 700 uppercase 18px;
+			}
+			p {
+				text: #000 14px;
+			}
+		}
+	}
+	&__form {
+		@extend .banner__form;
+		margin-top: 75px;
+		-webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,.2);
+		        box-shadow: 0px 0px 15px 5px rgba(0,0,0,.2);
+	}
+}
