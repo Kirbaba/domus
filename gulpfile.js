@@ -9,6 +9,7 @@ var gulp = require('gulp'), // Подключаем Gulp
     pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache = require('gulp-cache'); // Подключаем библиотеку кеширования
     //autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
+    extender = require('gulp-html-extend');
 
     var postcss = require('gulp-postcss');
 

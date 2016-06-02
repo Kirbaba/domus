@@ -8,14 +8,7 @@
 @mixin background-clip($clip) {
     -o-background-clip: $clip;
        background-clip: $clip;
-}
-
-@mixin box-shadow($top, $left, $blur, $color) {
-      -webkit-box-shadow:$top $left $blur $color;
-      -moz-box-shadow:$top $left $blur $color;
-      box-shadow:$top $left $blur $color;
-    }
-	
+}	
 
 @mixin transition($t) {
 	-webkit-transition: all $t linear;
@@ -60,13 +53,13 @@ $desktop: 1174px;
 $largeScreen: 1400px;
 @mixin respondTo($media) {
   @if $media == smartphone {
-    @media (max-width: $smartphone) { @content; }
+    @media (min-width: $smartphone) { @content; }
   }
   @else if $media == tablet {
     @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape) { @content; }
   }
   @else if $media == smallScreen {
-    @media (max-width: $desktop) { @content; }
+    @media (min-width: $desktop) { @content; }
   }
   @else if $media == desktop {
     @media (min-width: $desktop) { @content; }

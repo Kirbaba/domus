@@ -1,0 +1,102 @@
+.header {
+	float: left;
+	width: 100%;
+	padding: 10px 0 25px;
+	position: relative;
+	&__wrap {
+		float: left;
+		width: 100%;
+		position: relative;		
+		&:before {
+			content: "";
+			position: absolute;
+			height: 12px;
+			left: 0;
+			right: 0;
+			bottom: 10px;
+			background-color: #D90002;
+			-webkit-border-radius: 12px;
+			        border-radius: 12px;
+			z-index: 0;
+		}	
+	}
+
+	&__logo {
+		position: relative;
+		float: left;
+		width: 20%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		text-align: right;
+		padding-right: 10px;
+		z-index: 1;
+	}
+	&__title {
+		float: left;
+		width: 50%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 25px 10px;
+		img {
+			display: inline-block;
+			vertical-align: bottom;
+			width: 95%;
+		}
+	}
+	&__contacts {
+		float: left;
+		width: 30%;
+		position: relative;
+		text-align: right;
+		&_comics {
+			float: left;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 18px;
+			width: 125px;
+			height: 63px;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding-top: 13px;
+			padding-right: 10px;
+			text-align: center;
+			background-image: url('../img/Layer-19.png');
+			background-repeat: no-repeat;
+			-webkit-background-size: contain;
+			     -o-background-size: contain;
+			        background-size: contain;
+
+		}
+		h4 {
+			text: #000 400 21px 1;
+			float: right;
+			span {
+				text: $red 700
+			}
+		}
+		&_btn {
+			float: right;
+			display: inline-block;
+			color: #fff;
+			font-family: $os;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 0 15px;
+			height: 34px;
+			line-height: 30px;
+			margin-top: 7px;
+			@include border-radius(30px);
+			@include background-clip(padding-box);
+			background-color: #db0001;
+			@include box-shadow(0 1px 4px rgba(0,0,0,.42), inset -1px -2px 0 rgba(132,2,3,.24));
+			@include transition(.3s);
+			&:hover, &:focus {
+				background-color: lighten(#DB0001, 10%);
+			}
+		}
+	}
+}
