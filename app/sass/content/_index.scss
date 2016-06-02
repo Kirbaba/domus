@@ -344,3 +344,140 @@ main {
 		        box-shadow: 0px 0px 15px 5px rgba(0,0,0,.2);
 	}
 }
+
+.trust {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 25px 0;
+	h2 {
+		float: left;
+		width: 100%;
+		margin: 55px 0;
+	    text:#fff 700 uppercase center 30px; 
+	    span {
+	    	background-image: url('../img/Layer-20.png');
+	    	background-repeat: no-repeat;
+	    	-webkit-background-size: contain;
+	    	     -o-background-size: contain;
+	    	        background-size: contain;
+    	    padding: 70px 130px;
+	    }
+	}
+	h3 {
+		text-align: center;
+		text: #000 700 uppercase 25px;
+	}
+	&__item {
+		float: left;
+		width: 25%;
+		text-align: center;
+		margin: 25px 0;
+		padding: 0 25px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		&_icon {
+			display: block;
+			position: relative;
+			margin: 0 auto 15px;
+			width: 137px;
+			height: 137px;
+			@include border-radius(68px / 68px 68px 68px 68px);
+			@include background-clip(padding-box);
+			background-color: #757577;
+			&:after {
+				content: "";
+				position: absolute 3px;
+				border: 2px solid #fff;
+				@include border-radius(68px / 68px 68px 68px 68px);
+			}
+			img {
+				top: 50%;
+				position: relative;
+				-webkit-transform: translateY(-50%);
+				   -moz-transform: translateY(-50%);
+				    -ms-transform: translateY(-50%);
+				     -o-transform: translateY(-50%);
+				        transform: translateY(-50%);
+			}
+		}
+		p {
+			text: 18px;
+			strong {
+				font-weight: 700;
+				color: $red-light;
+			}
+		}
+	}
+
+}
+
+.book {
+	float: left;
+	width: 100%;
+	margin: 25px 0;
+	h2 {
+		float: left;
+		width: 100%;
+		margin: 55px 0;
+	    text:#fff 700 uppercase center 30px; 
+	    span {
+	    	background-image: url('../img/Layer-20.png');
+	    	background-repeat: no-repeat;
+	    	-webkit-background-size: contain;
+	    	     -o-background-size: contain;
+	    	        background-size: contain;
+    	    padding: 50px 110px;
+	    }
+	}
+	&__icon {
+		float: left;
+		width: 25%;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__desc {
+		width: 50%;
+		float: left;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-right: 50px;
+		
+		h3 {
+			text-align: center;
+			text:#000 700 uppercase center 30px;
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
+	}
+	&__form {
+		@extend .banner__form;
+		margin-top: 0;
+		&_head {
+			@extend .banner__form_head;
+		}
+		form {
+			float: left;
+			width: 100%;
+			padding: 40px 15px;
+			background-image: url('../img/Rectangle-3.png');
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+		}
+		&_inp {
+			@extend .banner__form_inp;
+		}
+		&_btn {
+			@extend .banner__form_btn;
+			margin-bottom: 0;
+		}
+	}
+}
