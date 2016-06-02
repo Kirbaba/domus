@@ -1,6 +1,8 @@
 .navigation {
 	float: left;
 	width: 100%;
+	position: relative;
+	z-index: 5;
 	background-image: url('../img/Rectangle-10-1.png');
 	background-repeat: repeat-x;
 	-webkit-background-size: cover;
@@ -14,6 +16,23 @@
 		float: left;
 		li {
 			display: inline-block;
+			position: relative;
+			&:not(:first-of-type):after{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				   -moz-transform: translateY(-50%);
+				    -ms-transform: translateY(-50%);
+				     -o-transform: translateY(-50%);
+				        transform: translateY(-50%);
+				width: 1px;
+				height: 14px;
+				background-color: rgba(95, 95, 95, 0.8);
+				@include box-shadow(0 0 2px rgba(255,255,255,.5));
+
+			}
 			a {
 				text: #fff 700 uppercase 12px;
 				padding: 5px 35px;

@@ -1,2 +1,254 @@
+main {
+	float: left;
+	width: 100%;
+}
+.banner {
+	position: relative;
+	float: left;
+	width: 100%;
+	background-image: url('../img/Brightness-Contrast-1.jpg');
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 50%;
+	padding: 0 10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	&__title {				
+		width: 60%; 
+		margin: 0 auto;
+		background-image: url('../img/kraska.png');
+		background-position: 50% 115%;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-left: 100px;
+		padding-bottom: 50px;
+		h3 {
+			text: #e7002e 700 27px;
+		}
+		p {
+			text: #333 500 18px;
+			strong {
+				text: #e7002e 700 26px;
+			}
+		}
+	}
+	&__advantages {
+		position: absolute;
+		left: 0;
+		float: left;
+		width: 250px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 10px;
+		padding-left: 0;
+		background-color: rgba(255,255,255,.61);
+		&_item {
+			float: left;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			margin: 4px 0;
+			padding: 20px 15px 20px 5px;
+			background-color: #fff;
+			@include box-shadow(0 3px 3px rgba(0,0,0,.11));
 
+			&_icon {
+				float: left;
+				width: 45px;
+				img {
+					max-width: 100%;
+				}
+			}
+			ul {
+				padding-left: 46px;
+				list-style-type: disc;
+				li {
+					text: #CF3426 11px;
+					letter-spacing: 0;
+				}
+			}
+			h5 {
+				display: inline-block;
+				width: calc(100% - 50px);
+				font-size: 11px;
+				color: #000;
+				margin: 10px 0 10px 5px;
+				strong {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	&__form {
+		float: right;
+		width: 240px;
+		background-color: #fff;
+		margin-top: -40px;
+		&_head {
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 15px 20px;
+			background-color: #cb2314;
+			text-align: center;
+			p {
+				text: #fff 700 15px;
+			}
+		}
+		form {
+			float: left;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+		    padding: 15px 20px;
+		}
+		&_inp {
+			float: left;
+			width: 100%;
+			height: 40px;
+			@include border-radius(20px);
+			border: 1px solid #ccc;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 0 25px;
+			outline: none;
+			margin-bottom: 20px;
+		}
+		&_btn {
+			float: left;
+			@extend .header__contacts_btn;
+			width: 100%;
+			text-align: center;
+			outline: none;
+			border: none;
+			margin-top: 0;
+			cursor: pointer;
+		}
+	}
+	&__bot {
+		float: left;
+		/* width: 100%; */
+		background-image: url('../img/kraska-1.png');
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		padding-top: 50px;
+		margin: 0 -10px;
+		&_wrap {
+			float: left;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 0 5%;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+		}
+		&_item {
+			float: left;
+			-webkit-flex-basis: 27%;
+			        flex-basis: 27%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 0 15px;
+			margin: 10px 0;
+			&_icon {
+				float: left;
+				width: 30px;	
+				img {
+					object-fit:contain;
+					object-position: 50%;
+				}			
+			}
+			p {
+				width: calc(100% - 30px);
+				float: left;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				padding-left: 5px;
+				font-size: 12px;
+				color: #000;
+			}	
+			&:nth-of-type(2) {
+				-webkit-flex-basis: 33%;
+				        flex-basis: 33%;
+			}		
+		}
+		&_navline {
+			float: left;
+			position: relative;
+			width: 100%;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				top: -10px;
+				left: -10px;
+				right: -10px;
+				bottom: -10px;
+				@include opacity(.61);
+				@include border-radius(32px);
+				@include background-clip(padding-box);
+				background-color: #fff;
+				z-index: 0;
+
+			}
+			ul {
+				position: relative;
+				z-index: 1;
+				background-image: url('../img/navline.png');			
+				-webkit-border-radius: 24px;
+				        border-radius: 24px;
+				padding: 10px 20px;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				display: flex;
+				-webkit-flex-direction: row;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				-webkit-justify-content: center;
+				        justify-content: center;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				width: 100%;
+				text-align: center;
+				li {
+					display: inline-block;					
+					text-align: left;
+					width: 100px;
+					vertical-align: top;
+					text-align: left;
+					margin: 0 10px;
+					a {
+						width: 100%;
+						float: left;
+						font-size: 12px;
+						color: #FFF;
+						&:hover, &:focus {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
